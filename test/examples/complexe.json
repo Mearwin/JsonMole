@@ -1,0 +1,56 @@
+{
+    "a": [
+     [
+      true,
+      "stra"
+     ],
+     true,
+     [
+      6.1,
+      {
+       "b": false,
+       "c": 10,
+       "d": 10
+      }
+     ],
+     true
+    ],
+    "e": -3.8,
+    "f": true,
+    "g": [
+     {
+      "h": "strh",
+      "i": true,
+      "j": {
+       "k": {
+        "l": "strl"
+       },
+       "m": {
+        "n": -1,
+        "o": "stro",
+        "p": false
+       }
+      },
+      "q": true
+     },
+     {
+      "h": {
+       "s": true,
+       "t": [
+        true,
+        -6,
+        null
+       ],
+       "u": {
+        "v": true,
+        "w": "strw"
+       }
+      },
+      "x": true
+     },
+     false,
+     -8,
+     "strg"
+    ],
+    "y": "stry"
+   }

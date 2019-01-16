@@ -1,0 +1,18 @@
+{
+  "name": "mole",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "mole": "./index.js"
+  },
+  "scripts": {
+    "start": "nodejs ./index.js",
+    "test": "./node_modules/.bin/mocha -w --reporter spec"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0"
+  }
+}

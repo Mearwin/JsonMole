@@ -1,28 +1,23 @@
-# JsonMole
-### Json parsing
+const expect = require('chai').expect;
+const parseFile = require('../mole').parseFile;
 
-Once installed:
+describe('.detectFile(file)', () => {
 
-``` bash 
-$ mole test/examples/simple.json
-{
+    it('parse simple json', () => {
+        expect(parseFile('./test/examples/simple.json'))
+            .to.equal(
+                `{
     v1: string,
     v2: number,
     v3: boolean
-} 
-``` 
-given:
-``` json
-{
-    "v1": "str",
-    "v2": 3,
-    "v3": true
-}
-```
-Or
-``` bash
-$ mole test/examples/complexe.json
-{
+}`
+            );
+    });
+
+    it('parse complexe json', () => {
+        expect(parseFile('./test/examples/complexe.json'))
+            .to.equal(
+                `{
     a: [
         [
             boolean | string
@@ -64,64 +59,8 @@ $ mole test/examples/complexe.json
         }
     ],
     y: string
-}
-```
-given:
-```json
-{
-    "a": [
-     [
-      true,
-      "stra"
-     ],
-     true,
-     [
-      6.1,
-      {
-       "b": false,
-       "c": 10,
-       "d": 10
-      }
-     ],
-     true
-    ],
-    "e": -3.8,
-    "f": true,
-    "g": [
-     {
-      "h": "strh",
-      "i": true,
-      "j": {
-       "k": {
-        "l": "strl"
-       },
-       "m": {
-        "n": -1,
-        "o": "stro",
-        "p": false
-       }
-      },
-      "q": true
-     },
-     {
-      "h": {
-       "s": true,
-       "t": [
-        true,
-        -6,
-        null
-       ],
-       "u": {
-        "v": true,
-        "w": "strw"
-       }
-      },
-      "x": true
-     },
-     false,
-     -8,
-     "strg"
-    ],
-    "y": "stry"
-   }
-```
+}`
+            );
+    });
+});
+
